@@ -1,0 +1,32 @@
+ALGORITHM insertion
+VAR
+   arr:= arr : ARRAY_OF INTEGER[];
+   temp,j,i,n:INTEGER;
+   
+BEGIN
+///remplir tableau 
+read(n)
+FOR i FROM 0 TO n-1 STEP step  DO
+   read(arr[i])
+END_FOR
+/////tri d'insertion
+   
+    FOR i from 1 TO n-1 STEP step   DO
+        aux:=arr[i];
+        i:=j;
+        WHILE  (j > 1) and (arr[j-1] > aux) DO
+            arr[j] := arr[j-1];
+            j := j - 1;
+        END_WHILE
+    arr[j] := aux;
+    END_FOR
+////// affichage tbleau trie
+ FOR i FROM 0 TO n-1 STEP step  DO
+   write(arr[i])
+END_FOR
+
+END
+
+
+
+
